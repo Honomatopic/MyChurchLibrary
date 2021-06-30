@@ -15,7 +15,7 @@ and open the template in the editor.
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">My Library Church</a>
+                <a class="navbar-brand" href="#">My Church Library</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -38,41 +38,45 @@ and open the template in the editor.
                         </li>
 
                     </ul>
-                    <form class="d-flex"action="<?php $_SERVER["PHP_SELF"];?>">
+                    <form class="d-flex"action="<?php $_SERVER["PHP_SELF"]; ?>">
                         <input class="form-control me-sm-2" type="text" name="recherche" placeholder="Rechercher">
-                         <input type="submit" class="btn btn-secondary my-2 my-sm-0" name="rechercher" value="Rechercher">
+                        <input type="submit" class="btn btn-secondary my-2 my-sm-0" name="rechercher" value="Rechercher">
                     </form>
                 </div>
             </div>
-            <?php if(isset($_POST["rechercher"])) { 
-                if(isset($_POST["recherche"])) {
-                    echo "Bonjour ". $_POST["recherche"];
+            <?php
+            if (isset($_POST["rechercher"])) {
+                if (isset($_POST["recherche"])) {
+                    echo "Bonjour " . $_POST["recherche"];
                 }
-            };?>
+            };
+            ?>
         </nav>
         <h1>My Church Library</h1>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="card-group">
+            <div class="card">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
             </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
             </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
             </div>
         </div>
     </body>

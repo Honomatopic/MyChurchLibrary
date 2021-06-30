@@ -14,60 +14,62 @@ and open the template in the editor.
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">My Library Church</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">My Church Library</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Accueil
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Livres</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Echanges</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="groupes.php">Groupes</a>
-        </li>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Accueil
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Livres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Echanges</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="groupes.php">Groupes</a>
+                        </li>
 
-      </ul>
-      <form class="d-flex"action="<?php $_SERVER["PHP_SELF"];?>">
+                    </ul>
+                    <form class="d-flex"action="<?php $_SERVER["PHP_SELF"]; ?>">
                         <input class="form-control me-sm-2" type="text" name="recherche" placeholder="Rechercher">
                         <input type="submit" class="btn btn-secondary my-2 my-sm-0" name="rechercher" value="Rechercher">
                     </form>
                 </div>
             </div>
-            <?php if(isset($_POST["rechercher"])) { 
-                if(isset($_POST["recherche"])) {
-                    echo "Bonjour ". $_POST["recherche"];
+            <?php
+            if (isset($_POST["rechercher"])) {
+                if (isset($_POST["recherche"])) {
+                    echo "Bonjour " . $_POST["recherche"];
                 }
-            };?>
-    </div>
-  </div>
-</nav>
-        <div class="container">
-            <h1>My Church Library</h1>
-            <a href="livres.php" div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Christian group</h5>
-                            <p class="card-text">Ceci est un groupe chrétien.</p>
-                            <p class="card-text"><small class="text-muted">Veuillez patientez...</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div></a>
+            };
+            ?>
         </div>
-    </body>
+    </div>
+</nav>
+<div class="container">
+    <h1>My Church Library</h1>
+    <a href="livres.php" div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="..." class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Christian group</h5>
+                    <p class="card-text">Ceci est un groupe chrétien.</p>
+                    <p class="card-text"><small class="text-muted">Veuillez patientez...</small></p>
+                </div>
+            </div>
+        </div>
+</div></a>
+</div>
+</body>
 </html>
