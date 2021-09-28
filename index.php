@@ -18,17 +18,18 @@ and open the template in the editor.
 </head>
 <body>
 
-
+<!-- Voici le menu de My Church Library !-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">My Church Library</a>
+			<!-- Le moteur de recherche !-->
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarColor01"
 				aria-controls="navbarColor01" aria-expanded="false"
 				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-
+			<!-- Les menus avec les liens : !-->
 			<div class="collapse navbar-collapse" id="navbarColor01">
 				<ul class="navbar-nav me-auto">
 					<li class="nav-item"><a class="nav-link active" href="#">Accueil <span
@@ -55,16 +56,25 @@ and open the template in the editor.
 
 
 	<h1>My Church Library</h1>
-	<!-- Button trigger modal -->
+	<!-- Button trigger modal pour se connecter -->
 	<button type="button" class="btn btn-primary" data-bs-toggle="modal"
 		data-bs-target="#exampleModal">Se connecter</button>
  <?php
-
+// Algorithme pour effectuer la recherche : Si le champ "recherche" est renseigné, alors tu m'affiches le message "Bonjour + le contenu du champ recherche"
 if (isset($_POST["rechercher"])) {
     if (isset($_POST["recherche"])) {
         echo "Bonjour " . $_POST["recherche"];
+		// var_dump est la fonction php permettant de visualiser le contenu d'une variable, d'un objet sous la forme d'un tableau associatif
         var_dump($_POST);
     }
+}
+
+// Algorithme gérant le formulaire de connexion : si on clique sur le bouton "Se connecter" et si les champs email et mot de passe sont renseignés alors PHP redirige vers la page des groupes
+if (isset($_POST["connecter"])) {
+	if(isset($_POST["email"], $_POST["motpasse"])){
+		// La fonction header en PHP permet de faire une redirection HTTP vers la page écrite dans les paramètres de la fonction
+		header("location:groupes.php");
+	}
 }
 ;
 ?>
@@ -79,18 +89,17 @@ if (isset($_POST["rechercher"])) {
 						aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<form action="" method="post">
+					<form action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
 						<input class="form-control" type="email" name="email" value=""
 							placeholder="Votre adresse e-mail"> <br> <input
-							class="form-control" type="password" name="password"
+							class="form-control" type="password" name="motpasse"
 							placeholder="Votre mot de passe">
 				
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary"
 						data-bs-dismiss="modal">Fermer</button>
-					<a href="groupes.php"<button type="button" class="btn btn-primary">Se
-							connecter</button></a>
+					<input type="submit" class="btn btn-primary" name="connecter" value="Se connecter">
 				</div>
 				</form>
 			</div>

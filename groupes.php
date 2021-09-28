@@ -52,18 +52,21 @@ and open the template in the editor.
 	<div class="container">
 		<h1>My Church Library</h1>
                 <?php
-                if (isset($_POST["rechercher"])) {
-                    if (isset($_POST["recherche"])) {
-                        echo "Bonjour " . $_POST["recherche"];
-                        var_dump($_POST);
-                    }
-                }
+				// Algorithme pour effectuer la recherche : Si le champ "recherche" est renseigné, alors tu m'affiches le message "Bonjour + le contenu du champ recherche"
+				if (isset($_POST["rechercher"])) {
+    				if (isset($_POST["recherche"])) {
+        				echo "Bonjour " . $_POST["recherche"];
+						// var_dump est la fonction php permettant de visualiser le contenu d'une variable, d'un objet sous la forme d'un tableau associatif
+        				var_dump($_POST);
+    					}
+					}
                 ;
-                ?>
+               ?>
+		<!-- Le groupe Christian qui ds'affiche sous forme de carte !-->
     <a href="livres.php" div class="card mb-3" style="max-width: 540px;">
 			<div class="row g-0">
 				<div class="col-md-4">
-					<img src="..." class="img-fluid rounded-start" alt="...">
+					<img src="img/chretien.jpg" class="img-fluid rounded-start" alt="Christian">
 				</div>
 				<div class="col-md-8">
 					<div class="card-body">

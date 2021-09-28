@@ -49,17 +49,20 @@ and open the template in the editor.
 	</nav>
 	<h1>My Church Library</h1>
                     <?php
-                    if (isset($_POST["rechercher"])) {
-                        if (isset($_POST["recherche"])) {
-                            echo "Bonjour " . $_POST["recherche"];
-                            var_dump($_POST);
-                        }
-                    }
-                    ;
-                    ?>
+						// Algorithme pour effectuer la recherche : Si le champ "recherche" est renseigné, alors tu m'affiches le message "Bonjour + le contenu du champ recherche"
+						if (isset($_POST["rechercher"])) {
+    						if (isset($_POST["recherche"])) {
+        					echo "Bonjour " . $_POST["recherche"];
+								// var_dump est la fonction php permettant de visualiser le contenu d'une variable, d'un objet sous la forme d'un tableau associatif
+        					var_dump($_POST);
+    						}
+						}
+                	;
+               		?>
+   <!-- Voici les carte des livres s'affichant pour le groupe Christian !-->
         <div class="card-group">
 		<div class="card">
-			<img class="card-img-top" src="..." alt="Card image cap">
+			<img class="card-img-top" src="img/livre1.jpeg" alt="Livre un">
 			<div class="card-body">
 				<h5 class="card-title">Card title</h5>
 				<p class="card-text">This is a wider card with supporting text below
@@ -71,7 +74,7 @@ and open the template in the editor.
 			</div>
 		</div>
 		<div class="card">
-			<img class="card-img-top" src="..." alt="Card image cap">
+			<img class="card-img-top" src="img/livre2.jpeg" alt="Livre deux">
 			<div class="card-body">
 				<h5 class="card-title">Card title</h5>
 				<p class="card-text">This card has supporting text below as a
@@ -82,7 +85,7 @@ and open the template in the editor.
 			</div>
 		</div>
 		<div class="card">
-			<img class="card-img-top" src="..." alt="Card image cap">
+			<img class="card-img-top" src="img/livre3.jpeg" alt="Livre trois">
 			<div class="card-body">
 				<h5 class="card-title">Card title</h5>
 				<p class="card-text">This is a wider card with supporting text below
